@@ -61,7 +61,7 @@ public class Sistema {
         } else {
             return Periodo.MADRUGADA;
         }
-    }
+    };
 
 
     public LinkedList<Usuario> lerBaseDados(String arquivo) {
@@ -78,10 +78,10 @@ public class Sistema {
             }
         } catch (IOException e) {
             System.out.println("Erro ao encontra o arquivo");
-        }
+        }finally {}
 
         return conjuntoUsuarios;
-    }
+    };
 
 
 
@@ -95,7 +95,6 @@ public class Sistema {
             }
         } catch (IOException e) {
             System.out.println("Erro ao encontra o arquivo");
-        }
+        }finally {}
     }
-
-}
+};

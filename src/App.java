@@ -9,7 +9,7 @@ public class App {
             System.out.println("Usuário e/ou senha incorretos.");
         }
 
-    }
+    };
 
 
     public static void menu() {
@@ -18,13 +18,11 @@ public class App {
         System.out.println("2 - Login");
         int opcao = sc.nextInt();
         switch (opcao) {
-            case 1:
-                cadastrar();
-            case 2:
-                login();
+            case 1: cadastrar();break;
+            case 2: login();break;
             default:
         }
-    }
+    };
 
 
     public static void cadastrar() {
@@ -37,7 +35,7 @@ public class App {
         sistema.salvaBaseDados();
         System.out.println("Cadastrado com Sucesso");
         menu();
-    }
+    };
 
 
     public static void login() {
@@ -56,7 +54,7 @@ public class App {
             case MADRUGADA: System.out.println("Boa madrugada " + usuario.getUsuario() + ", você se logou ao nosso sistema." + sistema.toString());break;
             default:
         }
-    }
+    };
 
 
 
