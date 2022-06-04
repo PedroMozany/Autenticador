@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -16,12 +17,18 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("1 - Cadastrar");
         System.out.println("2 - Login");
-        int opcao = sc.nextInt();
-        switch (opcao) {
-            case 1: cadastrar();break;
-            case 2: login();break;
-            default:
+        try {
+            int opcao = sc.nextInt();
+            switch (opcao) {
+                case 1: cadastrar();break;
+                case 2: login();break;
+                default:
+            }
+        }catch (InputMismatchException ex){
+            System.out.println("Favor digitar '1' para cadastrar ou '2' para login ");
+            menu();
         }
+
     };
 
 
